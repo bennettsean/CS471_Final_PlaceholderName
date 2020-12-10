@@ -6,8 +6,8 @@ var express = require('express'),
     bodyParser = require('body-parser');
 
 
-    const swaggerJsdoc = require("swagger-jsdoc");
-    const swaggerUi = require("swagger-ui-express");
+const swaggerJsdoc = require("swagger-jsdoc");
+const swaggerUi = require("swagger-ui-express");
 
 
 mongoose.Promise = global.Promise;
