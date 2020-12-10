@@ -10,7 +10,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.post('/sms', (req, res) => {
 
     // request to my db at localhost 3000
-    http.get('http://localhost:3000/x', (resp) => {
+    http.get('http://localhost:3000/events', (resp) => {
         let data = '';
 
         resp.on('data', (chunk) => {
@@ -21,6 +21,9 @@ app.post('/sms', (req, res) => {
             // parsing all tutors in json
             const respobj = JSON.parse(data);
             console.log(respobj);
+
+
+            
 
             // twilio msg construct
             const twiml = new MessagingResponse();
